@@ -1,0 +1,26 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<ng-container *ngFor="let ele of data | async | slice : -1">
+  <p>
+    {{ele}}
+  </p>
+</ng-container>
+
+<!-- Simple Example -->
+<div *ngFor="let ele of (controlData | async | slice : 1 ); let i = index">
+  <p>
+    {{ele.label}}
+  </p>
+  <mat-slider value="20"></mat-slider>
+<mat-progress-spinner
+        class="example-margin"
+        [mode]="'determinate'"
+        [value]="30">
+    </mat-progress-spinner>
+</div>
+
+  <mat-slider value="20"></mat-slider>
+<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
