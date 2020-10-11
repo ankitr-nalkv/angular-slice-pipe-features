@@ -1,29 +1,34 @@
-Scenario 1
-<br />
-First element of array {{firstEle}}
-<br />
-<br />
-Scenario 2
-<br />
-First element of array
-<ng-container *ngFor="let ele of data | async; let i = index">
-  <p *ngIf="i == 0">
-    {{ele}}
-  </p>
-</ng-container>
+<h4>Approach 1</h4>
+First element of array {{firstEle}}
+<br />
 
-<!-- Simple Example -->
-<div *ngFor="let ele of (controlData | async | slice : 1 ); let i = index">
-  <p>
-    {{ele.label}}
-  </p>
-  <mat-slider value="20"></mat-slider>
-<mat-progress-spinner
-        class="example-margin"
-        [mode]="'determinate'"
-        [value]="30">
-    </mat-progress-spinner>
-</div>
 
-  <mat-slider value="20"></mat-slider>
-<mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+<!-- <br />
+<h4>Approach 2</h4>
+<ng-container *ngFor="let ele of data | async; let i = index">
+  <div *ngIf="i == 0; else elseBlock">
+    First element of array {{ele}}
+  </div>
+  <ng-template #elseBlock>
+    <div class="red">{{ele}} other elements</div>
+  </ng-template>
+</ng-container> -->
+
+
+
+<!-- <br />
+<h4>Approach 3</h4>
+First element of array {{data | async | slice : 0 : 1 }} -->
+
+
+
+
+
+<!-- Simple Example -->
+
+<!-- <br />
+<br />
+<h4>Simple Example</h4>
+  <div [innerHtml] = "(controlData | async | slice : 0 : 1 )[0].label">
+  </div>
+  <mat-progress-bar mode="determinate" [value]="(controlData | async | slice : 0 : 1 )[0].value"></mat-progress-bar> -->

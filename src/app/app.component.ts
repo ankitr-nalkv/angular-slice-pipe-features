@@ -20,10 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
-  }
-
-
-
+  };
 
   controlData = of([
     {
@@ -34,19 +31,5 @@ export class AppComponent implements OnInit, OnDestroy {
       label: 'spinnerprogress',
       value: 40
     }
-  ])
-  chartData = of([
-    {
-      name: 'clothes',
-      value: 100
-    },
-    {
-      name: 'groceries',
-      value: 500
-    },
-    {
-      name: 'food ordering',
-      value: 200
-    }
-  ])
+  ]);
 }
