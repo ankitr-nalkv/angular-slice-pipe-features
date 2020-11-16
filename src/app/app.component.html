@@ -2,33 +2,24 @@
 First element of array {{firstEle}}
 <br />
 
-
-<!-- <br />
+<br />
 <h4>Approach 2</h4>
 <ng-container *ngFor="let ele of data | async; let i = index">
-  <div *ngIf="i == 0; else elseBlock">
-    First element of array {{ele}}
-  </div>
-  <ng-template #elseBlock>
-    <div class="red">{{ele}} other elements</div>
-  </ng-template>
-</ng-container> -->
+	  <div *ngIf="i == 0; else elseBlock">
+		First element of array {{ele}}
+		  </div>
+	  <ng-template #elseBlock>
+		    <div class="red">{{ele}} other elements</div>
+		  </ng-template>
+</ng-container>
 
-
-
-<!-- <br />
+<br />
 <h4>Approach 3</h4>
-First element of array {{data | async | slice : 0 : 1 }} -->
+First element of array {{data | async | slice : 0 : 1 }}
 
-
-
-
-
-<!-- Simple Example -->
-
-<!-- <br />
+<br />
 <br />
 <h4>Simple Example</h4>
-  <div [innerHtml] = "(controlData | async | slice : 0 : 1 )[0].label">
-  </div>
-  <mat-progress-bar mode="determinate" [value]="(controlData | async | slice : 0 : 1 )[0].value"></mat-progress-bar> -->
+  <div [innerHtml]="(controlData | async | slice : 0 : 1 )[0].label">
+	  </div>
+  <mat-progress-bar mode="determinate" [value]="(controlData | async | slice : 0 : 1 )[0].value"></mat-progress-bar>
